@@ -8,11 +8,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Util;
 
 namespace ActivityExperiments
 {
-	[Activity (Label = "DemoActivity", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
-	public class DemoActivity : Activity
+	[Activity (Label = "Second Activity", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
+	public class SecondActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -22,6 +23,7 @@ namespace ActivityExperiments
 
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text = "I'm in OnCreate\n";
+			Log.Debug(GetType().FullName, "In OnCreate");
 
 			Button btnBack = FindViewById<Button> (Resource.Id.backButton);
 
@@ -52,6 +54,7 @@ namespace ActivityExperiments
 			base.OnStart ();
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text += "I'm in OnStart\n";
+			Log.Debug(GetType().FullName, "In OnStart");
 		}
 
 		// Returning from an alarm clock screen will take you directly here
@@ -61,6 +64,7 @@ namespace ActivityExperiments
 			base.OnResume ();
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text += "I'm in OnResume\n";
+			Log.Debug(GetType().FullName, "In OnResume");
 		}
 
 		// Back button from another Activity will bring you here
@@ -69,6 +73,7 @@ namespace ActivityExperiments
 			base.OnRestart ();
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text += "I'm in OnRestart\n";
+			Log.Debug(GetType().FullName, "In OnRestart");
 		}
 
 		// Lots of things bring you here, then to OnStop, like starting another Activity
@@ -78,6 +83,7 @@ namespace ActivityExperiments
 			base.OnPause ();
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text += "I'm in OnPause\n";
+			Log.Debug(GetType().FullName, "In OnPause");
 		}
 
 		// Starting another Activity will take you here after OnPause
@@ -87,6 +93,7 @@ namespace ActivityExperiments
 			base.OnStop ();
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text += "I'm in OnStop\n";
+			Log.Debug(GetType().FullName, "In OnStop");
 		}
 
 
@@ -96,6 +103,7 @@ namespace ActivityExperiments
 			base.OnDestroy ();
 			TextView tvState = FindViewById<TextView> (Resource.Id.stateTextView);
 			tvState.Text += "I'm in OnDestroy\n";
+			Log.Debug(GetType().FullName, "In OnDestroy");
 		}
 
 }

@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Util;
 
 namespace ActivityExperiments
 {
@@ -24,10 +25,43 @@ namespace ActivityExperiments
 			Button btnStart = FindViewById<Button> (Resource.Id.startButton);
 			
 			btnStart.Click += delegate {
-				Intent mainIntent = new Intent(this, typeof(DemoActivity));
+				Intent mainIntent = new Intent(this, typeof(SecondActivity));
 				StartActivity(mainIntent);
 			};
+
+			Log.Debug(GetType().FullName, "In OnCreate");
 		}
+
+		protected override void OnResume()	
+		{
+			base.OnResume ();
+			Log.Debug(GetType().FullName, "In OnResume");
+		}
+
+		protected override void OnRestart()	
+		{
+			base.OnRestart ();
+			Log.Debug(GetType().FullName, "In OnRestart");
+		}
+
+		protected override void OnPause()
+		{
+			base.OnPause ();
+			Log.Debug(GetType().FullName, "In OnPause");
+		}
+
+		protected override void OnStop()
+		{
+			base.OnStop ();
+			Log.Debug(GetType().FullName, "In OnStop");
+		}
+
+		protected override void OnDestroy()
+		{
+			base.OnDestroy ();
+			Log.Debug(GetType().FullName, "In OnDestroy");
+		}
+
 	}
 }
 

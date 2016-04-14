@@ -1,11 +1,22 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.T088700XD7" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ActivityExperiments\MainActivity.cs">
+﻿<Properties StartupItem="ActivityExperiments/ActivityExperiments.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ActivityExperiments/MainActivity.cs">
     <Files>
-      <File FileName="ActivityExperiments\MainActivity.cs" Line="21" Column="21" />
-      <File FileName="ActivityExperiments\SecondActivity.cs" Line="1" Column="1" />
-      <File FileName="ActivityExperiments\ThirdActivity.cs" Line="1" Column="1" />
+      <File FileName="ActivityExperiments/SecondActivity.cs" Line="1" Column="1" />
+      <File FileName="ActivityExperiments/ThirdActivity.cs" Line="1" Column="1" />
+      <File FileName="ActivityExperiments/MainActivity.cs" Line="30" Column="6" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ActivityExperiments" expanded="True">
+            <Node name="ActivityExperiments" expanded="True">
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

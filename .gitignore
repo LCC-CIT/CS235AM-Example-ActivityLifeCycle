@@ -1,5 +1,5 @@
 #################
-## Visual Studio
+## Visual Studio & Xamarin Studio
 #################
 
 [Oo]bj
@@ -11,6 +11,9 @@
 *.ncb
 *.log 
 [Tt]humbs.db 
-TipOfTheDay.Domain/Concrete/TipOfTheDayDatabase.dacpac
 *.ldf
 *.mdf
+
+*.userprefs
+
+*designer.cs

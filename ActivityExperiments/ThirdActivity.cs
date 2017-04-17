@@ -12,17 +12,25 @@ using Android.Util;
 
 namespace ActivityExperiments
 {
-	[Activity (Label = "ThirdActivity")]			
+	[Activity (Label = "ThirdActivity", ParentActivity = typeof(SecondActivity))]			
 	public class ThirdActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+            Log.Debug(GetType().FullName, "In OnCreate");
 
-			// Create your application here
-		}
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+        }
 
-		protected override void OnResume()	
+        protected override void OnStart()
+        {
+            base.OnStart();
+            Log.Debug(GetType().FullName, "In OnStart");
+
+        }
+
+        protected override void OnResume()	
 		{
 			base.OnResume ();
 			Log.Debug(GetType().FullName, "In OnResume");

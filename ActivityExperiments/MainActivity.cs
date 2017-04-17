@@ -9,8 +9,9 @@ using Android.Util;
 
 namespace ActivityExperiments
 {
-	[Activity (Label = "MainActivity", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]
-	public class MainActivity : Activity
+    //	[Activity (Label = "MainActivity", MainLauncher = true, LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]
+    [Activity(Label = "MainActivity", MainLauncher = true)]
+    public class MainActivity : Activity
 	{
 
 		protected override void OnCreate (Bundle bundle)
@@ -32,7 +33,13 @@ namespace ActivityExperiments
 			Log.Debug(GetType().FullName, "In OnCreate");
 		}
 
-		protected override void OnResume()	
+        protected override void OnStart()
+        {
+            base.OnStart();
+            Log.Debug(GetType().FullName, "In OnStart");
+        }
+
+        protected override void OnResume()	
 		{
 			base.OnResume ();
 			Log.Debug(GetType().FullName, "In OnResume");

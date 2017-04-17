@@ -12,8 +12,9 @@ using Android.Util;
 
 namespace ActivityExperiments
 {
-	[Activity (Label = "Second Activity", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
-	public class SecondActivity : Activity
+    // [Activity (Label = "Second Activity", LaunchMode = Android.Content.PM.LaunchMode.SingleInstance)]			
+    [Activity(Label = "Second Activity")]
+        public class SecondActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
